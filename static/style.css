@@ -11,6 +11,8 @@ html, body {
 
 .myHeader{
     font-family: "Syne Mono", monospace;
+    font-weight: 900;
+    font-size: clamp(16px, 2.5vw, 32px);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
