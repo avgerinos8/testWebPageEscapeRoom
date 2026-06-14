@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Cryptic Grid: Escape Rooms</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@200;400;700;900&family=Syne+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Play:wght@400;700&family=Syne+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+
+    <header class="myHeader"> <div>{{ .Header }}</div> </header>
+
+    <section class="sections sec-home">
+    <div class="subHeader"> {{.SubHeader}} </div>
+    <div class="maintext"><a class="normaltext">{{ .Text0 }}</a> <a class="normaltext underlinedtext">{{ .Text1 }}</a> <a class="normaltext">{{ .Text2 }}</a></div>
+    </section>
+
+    <section class="sections sec-rooms">
+        <div class="twocolumns">
+            <div class="rooms">
+                <div class="roomname">
+                    The Cell 404
+                </div>
+                <div class="roomdescr">
+                    <div>Περιγραφή: Ξυπνάς κλειδωμένος σε ένα εγκαταλελειμμένο ψηφιακό εργαστήριο. Οι servers υπερθερμαίνονται και οι πόρτες έχουν μπλοκάρει. Βρίσκεσαι παγιδευμένος στο κέντρο ενός τεράστιου, εγκαταλελειμμένου ψηφιακού εργαστηρίου. Γύρω σου, ατελείωτες σειρές από servers που θεωρούνταν νεκροί για χρόνια έχουν πάρει ξαφνικά μπρος μόνοι τους.</div><div>O βόμβος των ανεμιστήρων τους είναι εκκωφαντικός, αλλά δεν αρκεί για να τους ψύξει. Οι ψηφιακές οθόνες στους τοίχους αναβοσβήνουν μανιωδώς, γεμάτες γραμμές κώδικα που τρέχουν με ιλιγγιώδη ταχύτητα και προειδοποιήσεις κινδύνου: «CRITICAL OVERHEAT – SYSTEM FAILURE IN 10 MINUTES».</div>
+                </div>
+                <div class="roomstats">
+                    Στοιχεία: Δυσκολία: 4/5 | Διάρκεια: 60 λεπτά
+                </div>
+            </div>
+            <div class="rooms">
+                <div class="roomname">
+                    The Server Enigma
+                </div>
+                <div class="roomdescr">
+                    <div>Περιγραφή: Ένας hacker έχει κλέψει τα δεδομένα της πόλης. Πρέπει να διεισδύσεις στο αρχηγείο του και να βρεις τον κωδικό απενεργοποίησης.</div><div>Το ψηφιακό σκοτάδι έχει καλύψει την πόλη. Ένας άγνωστος hacker παραβίασε τα κεντρικά συστήματα, κλέβοντας ευαίσθητα δεδομένα εκατομμυρίων πολιτών και απειλώντας να προκαλέσει γενικό black out. Ο χρόνος μετράει αντίστροφα. Η μοναδική ελπίδα της πόλης κρύβεται στο καλά οχυρωμένο αρχηγείο του. Η αποστολή σας; Να διεισδύσετε απαρατήρητοι στο κρησφύγετό του, να ξεπεράσετε τα συστήματα ασφαλείας και να εντοπίσετε τον μοναδικό κωδικό απενεργοποίησης πριν η καταστροφή γίνει μη αναστρέψιμη.</div>
+                </div>
+                <div class="roomstats">
+                    Στοιχεία: Δυσκολία: 5/5 | Διάρκεια: 75 λεπτά
+                </div>
+            </div>
+        </div>  
+    </section>
+
+    <section class="sections sec-contact">
+    <div class="subHeader">contact</div>
+    </section>
+
+    <footer class="myFooter"> 
+       <div class="copyright">Webpage made with love by Blasphemy and MaverickFan.</div> 
+       
+       <div>Visitor Count: {{ .CountNumber }}</div> </footer>
+</body>
+</html>

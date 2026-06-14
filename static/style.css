@@ -1,0 +1,168 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory; 
+    overflow-y: scroll;
+    background-color: black;
+    color: white;
+}
+
+.myHeader{
+    font-family: "Syne Mono", monospace;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px 30px;
+    color:white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh; /* Καθορισμένο ύψος */
+    background-color: rgba(56, 56, 56, 0.5); 
+    z-index: 1000; /* Πάντα πάνω από τα sections */
+}
+
+.myFooter {
+    font-family: "Play", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+
+    color: white;    
+    padding: 15px 30px;
+    box-sizing:content-box;
+    
+    gap: 1vh;
+    position: fixed;
+    bottom: 0;
+    left: 0;         
+    width: 100%;     
+    height: 10vh; /* Καθορισμένο ύψος */
+    background-color: rgba(56, 56, 56, 0.5); 
+    color: white;    
+    box-sizing: border-box;
+    z-index: 1000; /* Πάντα πάνω από τα sections */
+}
+
+.subHeader {
+    display: flex;
+    font-family: "Syne Mono", monospace;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 32px;                  /* Ακόμα πιο μεγάλο κείμενο */
+    justify-content: center;
+    margin: 5vh;
+    margin-top: 20vh;
+}
+
+.maintext {
+    font-family: "Syne Mono", monospace; /* Χρήση της νέας γραμματοσειράς */
+    font-size: clamp(12px, 2.5vw, 28px);                  /* Ακόμα πιο μεγάλο κείμενο */
+    font-weight: 200;                 /* Το απόλυτο "Black" βάρος */
+    display: flex;
+    flex-direction: row; 
+    margin-top: 20vh;
+    justify-content: center;  
+    align-items: center;      
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+}
+
+.normaltext {
+    color:rgb(255, 244, 162);
+    white-space: nowrap;
+}
+
+.underlinedtext {
+    text-decoration: underline;
+}
+
+.twocolumns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5vw;
+    gap: 5vw;
+}
+
+.rooms {
+    font-family: "Fira Sans Extra Condensed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(14px, 2.5vw, 18px);                  /* Ακόμα πιο μεγάλο κείμενο */
+    display: flex;
+    height: 55vh;
+    flex-direction: column;
+    justify-content: space-between;   /* Κεντράρει κατακόρυφα */
+    align-items: center;       /* Κεντράρει οριζόντια */
+    padding: 2vw;
+    border: 1px groove white;
+    width: 400px;      /* Το επιθυμητό σταθερό πλάτος (άλλαξέ το όσο θέλεις) */
+    min-width: 300px;  /* Το ελάχιστο πλάτος που μπορεί να πάρει σε μικρές οθόνες */
+    max-width: 600px;  /* Το μέγιστο πλάτος που μπορεί να πάρει σε μεγάλες οθόνες */
+}
+
+.roomname {
+    font-family: "Syne Mono", monospace;
+    font-weight: 900;
+    font-style: normal;
+
+    font-size: clamp(16px, 2.5vw, 24px);      
+}
+
+.roomdescr {
+    color:rgb(187, 183, 155);
+    text-align: justify;
+}
+
+.roomstats {
+    font-family: "Play", sans-serif;
+    font-weight: 400;
+}
+
+.sections {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    height: 100vh; 
+    width: 100%;
+    
+
+    scroll-snap-align: start; 
+    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    padding-top: 10vh;   /* 10% ύψος για το header */
+    padding-bottom: 10vh;/* 10% ύψος για το footer */
+    box-sizing: border-box;
+    
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+}
+
+.sec-home {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/static/images/bg-home.jpg');
+}
+
+
+.sec-rooms {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/static/images/bg-rooms.jpg');
+}
+
+
+.sec-contact {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/static/images/bg-contact.jpg');
+}
