@@ -168,3 +168,119 @@ html, body {
 .sec-contact {
     background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/static/images/bg-contact.jpg');
 }
+
+#textarea-input {
+    width: 65vw;
+    height: 20vh;
+    padding: 15px;
+    box-sizing: border-box;
+    
+    /* Χρώματα Βάσης (Βαθύ Κόκκινο / Αίμα) */
+    background-color: rgb(133, 26, 26);
+    color: #fce8e8;             /* Πολύ απαλό ροζ/λευκό για να διαβάζεται πεντακάθαρα */
+    border: 2px solid #570b0b;  /* Σκούρο, πηγμένο κόκκινο περίγραμμα */
+    border-radius: 6px;
+    
+    /* Γραμματοσειρά & Στυλ */
+    font-family: 'Courier New', Courier, monospace; /* Δίνει ένα πιο "creepy" ή custom στυλ */
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    
+    /* Συμπεριφορά & Εφέ */
+    resize: vertical;
+    outline: none;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Πιο δραματικό transition */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6);        /* Εσωτερική σκιά για βάθος */
+}
+
+/* Στυλ για το Placeholder */
+#textarea-input::placeholder {
+    color: #ff9494;             /* Ανοιχτό κόκκινο της σάρκας */
+    opacity: 0.6;
+    font-style: italic;
+}
+
+/* Εφέ Hover (Όταν περνάει το ποντίκι από πάνω) */
+#textarea-input:hover {
+    border-color: #8a0c0c;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.8), 0 0 8px rgba(139, 0, 0, 0.3);
+}
+
+/* Εφέ Focus (Όταν κάνεις κλικ για να γράψεις) */
+#textarea-input:focus {
+    background-color: rgb(110, 18, 18);          /* Ελαφρώς πιο σκοτεινό, "πηχτό" κόκκινο */
+    border-color: #ff0000;                        /* Ζωντανό, φωτεινό κόκκινο του αίματος */
+    /* Διπλό shadow: Εσωτερικό σκοτάδι + Εξωτερική αιματηρή λάμψη (Glow) */
+    box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.7), 0 0 20px rgba(255, 0, 0, 0.6);
+}
+
+/* Custom Scrollbar για να δένει με το design (Chrome, Edge, Safari) */
+#textarea-input::-webkit-scrollbar {
+    width: 8px;
+}
+#textarea-input::-webkit-scrollbar-track {
+    background: #3a0505;        /* Σκούρο background για το track */
+    border-radius: 4px;
+}
+#textarea-input::-webkit-scrollbar-thumb {
+    background: #851a1a;        /* Το κόκκινο χρώμα σου στο scrollbar */
+    border-radius: 4px;
+}
+#textarea-input::-webkit-scrollbar-thumb:hover {
+    background: #ff0000;        /* Γίνεται φωτεινό κόκκινο στο hover */
+}
+
+.custombut {
+    /* Μέγεθος και Σχήμα */
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    
+    /* Γραμματοσειρά που ταιριάζει με το textarea */
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;  /* Κεφαλαία γράμματα για πιο aggressive στυλ */
+    letter-spacing: 2px;        /* Απόσταση ανάμεσα στα γράμματα */
+    
+    /* Χρώματα (Πηγμένο Αίμα) */
+    background: linear-gradient(135deg, #570b0b 0%, #3a0505 100%);
+    color: #ff9494;             /* Ανοιχτό κόκκινο/ροζ κείμενο */
+    border: 2px solid #851a1a;  /* Το βασικό κόκκινο χρώμα στο περίγραμμα */
+    
+    /* Εφέ και Σκιές */
+    outline: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5), inset 0 1px 3px rgba(255, 0, 0, 0.2);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Εφέ Hover (Όταν περνάει το ποντίκι από πάνω) */
+.custombut:hover {
+    color: #ffffff;             /* Το κείμενο γίνεται κάτασπρο */
+    border-color: #ff0000;      /* Φωτεινό κόκκινο περίγραμμα */
+    
+    /* Το φόντο "γεμίζει" με ζωντανό, υγρό κόκκινο αίμα */
+    background: linear-gradient(135deg, #851a1a 0%, #a81111 100%);
+    
+    /* Έντονη εξωτερική κόκκινη λάμψη (Blood Glow) */
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.6), inset 0 0 8px rgba(255, 255, 255, 0.1);
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.8); /* Λάμψη και στα γράμματα */
+    transform: translateY(-2px); /* Μικρό ανασήκωμα */
+}
+
+/* Εφέ Active (Όταν το πατάς) */
+.custombut:active {
+    transform: translateY(1px);  /* Βυθίζεται ελαφρώς κατά το κλικ */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7), inset 0 0 10px rgba(0, 0, 0, 0.8);
+    background: #250202;         /* Γίνεται πολύ σκούρο, σχεδόν μαύρο */
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}

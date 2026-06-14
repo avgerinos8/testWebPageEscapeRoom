@@ -49,8 +49,20 @@
         </div>  
     </section>
 
-    <section class="sections sec-contact">
+    <section class="sections sec-contact" id="section3">
     <div class="subHeader">contact</div>
+    <form class="contact" method="POST" action="/contact">
+        
+        <label class="roomstats" for="text-input">{{ .ContactMessage }}</label>  
+        
+        <div class="textarea-container">
+        <textarea id="textarea-input" name="comments" rows="4" cols="40" placeholder={{.FormPlaceholder}}></textarea>
+        </div>
+
+        <button class="custombut" type="submit">Send message</button>
+
+    </form>
+
     </section>
 
     <footer class="myFooter"> 
